@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Padding and Margin</title>
+    <title>Box Shadow</title>
 </head>
 <style>
     body{
@@ -15,14 +15,16 @@
     }
     .box{
         border: 1px solid #000;
+        border-radius: 10px;
     }
     .p1{
         background-color: rgb(246, 123, 0);
     }
     .p2{
         background-color: rgb(7, 217, 7);
-        margin-top: 0px;
-        padding-top:-50px;
+        margin-top: 10px;
+        box-shadow:  2px 2px 0 rgba(0,0,0,0.4),
+        2px 2px 0 rgba(0,0,0,0.4) inset;
 
     }
 </style>
