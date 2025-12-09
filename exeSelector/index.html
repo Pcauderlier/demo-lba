@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector CSS</title>
+    <style>
+        h1 ,  .firstSection div p{
+            color: blue;
+        }
+        
+        #main section p{
+            color: orange;
+        }
+        .firstSection p{
+            color: red;
+        }
+      
+        .btn:hover{
+            background-color: black;
+
+        }
+        .btn.btn-2:hover{
+            background-color: yellow;
+        }
+        .firstSection div .btn:hover{
+            background-color: blue;
+        }
+        .firstSection div .btn.btn-2:hover{
+            background-color: green;
+        }
+        .firstSection .btn:hover{
+            background-color: red;
+        }
+        .firstSection .btn.btn-2:hover{
+            background-color: orange;
+        }
+        .firstSection{
+            &:hover{
+
+            }
+        }
+        section h1{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1> This is a H1 (blue)</h1>
+
+        <section class="firstSection">
+            <p> LOREM IPSUM (red) <a>test</a></p>
+            <div>
+                <p>Colorie moi en bleux !</p>
+                <button class="btn btn-2"> Au hover, je veux un background vert !</button>
+                <button class="btn"> Au hover je veux un background blue !</button>
+            </div>
+            <button class="btn btn-2"> Au hover, je veux un background orange !</button>
+            <button class="btn"> Au hover je veux un background rouge !</button>
+        </section>
+        <section>
+            <h1>Je suis un H1 mauve</h1>
+            <p> Lorem ipsum (orange)</p>
+            <button class="btn btn-2"> Au hover, je veux un background jaune !</button>
+            <button class="btn"> Au hover je veux un background noir !</button>
+        </section>
+    </div>
+</body>
+</html>
