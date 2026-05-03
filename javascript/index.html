@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        .error{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for=""> Nom : </label>
+        <input type="text" id="name">
+        <input type="submit" value="Soumettre le formulaire">
+    </form>
+    <button >Click me</button>
+    <script>
+        let form = document.querySelector("form")
+        form.addEventListener('submit', function(e){
+            e.preventDefault()
+            console.log("helloworld")
+            let nameInput = document.querySelector("#name")
+            console.log("Bonjour " +  nameInput.value)
+        })
+        function clickBtn(){
+            console.log("BTN CLICKED")
+        }
+        
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>

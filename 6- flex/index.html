@@ -1,107 +1,844 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Box Shadow</title>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--[if mso]>
+<xml><w:WordDocument xmlns:w="urn:schemas-microsoft-com:office:word"><w:DontUseAdvancedTypographyReadingMail/></w:WordDocument>
+<o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml>
+<![endif]--><!--[if !mso]><!-->
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css"><!--<![endif]-->
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		a[x-apple-data-detectors] {
+			color: inherit !important;
+			text-decoration: inherit !important;
+		}
+
+		#MessageViewBody a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		p {
+			line-height: inherit
+		}
+
+		.desktop_hide,
+		.desktop_hide table {
+			mso-hide: all;
+			display: none;
+			max-height: 0px;
+			overflow: hidden;
+		}
+
+		.image_block img+div {
+			display: none;
+		}
+
+		sup,
+		sub {
+			font-size: 75%;
+			line-height: 0;
+		}
+
+		@media (max-width:620px) {
+			.mobile_hide {
+				display: none;
+			}
+
+			.row-content {
+				width: 100% !important;
+			}
+
+			.stack .column {
+				width: 100%;
+				display: block;
+			}
+
+			.mobile_hide {
+				min-height: 0;
+				max-height: 0;
+				max-width: 0;
+				overflow: hidden;
+				font-size: 0px;
+			}
+
+			.desktop_hide,
+			.desktop_hide table {
+				display: table !important;
+				max-height: none !important;
+			}
+
+			.row-3 .column-1 .block-1.paragraph_block td.pad>div,
+			.row-4 .column-1 .block-1.heading_block h1,
+			.row-7 .column-1 .block-1.heading_block h1 {
+				font-size: 16px !important;
+			}
+
+			.row-1 .column-1 .block-1.heading_block td.pad {
+				padding: 4px 20px !important;
+			}
+
+			.row-1 .column-1 .block-1.heading_block h1,
+			.row-13 .column-1 .block-1.heading_block h1 {
+				font-size: 12px !important;
+			}
+
+			.row-3 .column-1 .block-2.button_block td.pad {
+				padding: 12px 12px 32px !important;
+			}
+
+			.row-3 .column-1 .block-2.button_block span {
+				font-size: 16px !important;
+				line-height: 19.2px !important;
+			}
+
+			.row-5 .column-1 .block-3.paragraph_block td.pad>div,
+			.row-5 .column-2 .block-2.paragraph_block td.pad>div,
+			.row-5 .column-2 .block-3.paragraph_block td.pad>div,
+			.row-5 .column-3 .block-2.paragraph_block td.pad>div,
+			.row-5 .column-3 .block-3.paragraph_block td.pad>div {
+				text-align: center !important;
+			}
+
+			.row-5 .column-1 .block-2.paragraph_block td.pad>div {
+				text-align: center !important;
+				font-size: 16px !important;
+			}
+
+			.row-5 .column-2 .block-2.paragraph_block td.pad,
+			.row-5 .column-3 .block-2.paragraph_block td.pad {
+				padding: 20px 0 8px !important;
+			}
+
+			.row-8 .column-1 .block-2.paragraph_block td.pad,
+			.row-8 .column-2 .block-2.paragraph_block td.pad,
+			.row-8 .column-3 .block-2.paragraph_block td.pad {
+				padding: 0 28px 12px !important;
+			}
+
+			.row-8 .column-2 .block-1.paragraph_block td.pad,
+			.row-8 .column-3 .block-1.paragraph_block td.pad {
+				padding: 0 0 8px !important;
+			}
+
+			.row-11 .column-1 .block-1.paragraph_block td.pad {
+				padding: 8px 12px 12px !important;
+			}
+
+			.row-11 .column-1 .block-3.paragraph_block td.pad {
+				padding: 0 16px !important;
+			}
+
+			.row-12 .column-1 .block-1.paragraph_block td.pad {
+				padding: 20px 0 12px !important;
+			}
+
+			.row-5 .column-1 .col-pad,
+			.row-5 .column-2,
+			.row-5 .column-3 .col-pad,
+			.row-8 .column-1 .col-pad,
+			.row-8 .column-2,
+			.row-8 .column-3 .col-pad {
+				padding: 0 28px !important;
+			}
+		}
+	</style><!--[if mso ]><style>sup, sub { font-size: 100% !important; } sup { mso-text-raise:10% } sub { mso-text-raise:-10% }</style> <![endif]-->
 </head>
-<style>
-    *{
-        margin: 0;
-    }
-    
-    .box{
-        border: 1px solid #000;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /* flex-basis: 200px; */
-        /* flex-grow: 1; */
 
-        width: 25%;
-        box-sizing: border-box;
-    }
-    .p1{
-        background-color: rgb(246, 123, 0);
-    }
-    .p2{
-        background-color: rgb(7, 217, 7);
-
-    }
-    .container{
-        width: 100%;
-        height: 500px;
-        border: 1px dashed black;
-        display: flex;
-        flex-direction: row;
-        /* gap: 50px; */
-        flex-wrap: wrap;
-        align-items:center;
-        justify-content: space-evenly;
-        
-    }
-
-</style>
-<body>
-    <div class="container">
-        <div class="box p2">
-            <p> d</p>
-        </div>
-        <div class="box p1">
-            <p>Hello</p>
-        </div>
-        <div class="box p2">
-            <p>w jlkdjzlekdjzlkdjzlkjd lzkej dlkzj dlkzjedlkzej dlkzj edlk</p>
-        </div>
-         <div class="box p2">
-            <p> d</p>
-        </div>
-        <div class="box p1">
-            <p>Hello</p>
-        </div>
-        <div class="box p2">
-            <p>w jlkdjzlekdjzlkdjzlkjd lzkej dlkzj dlkzjedlkzej dlkzj edlk</p>
-        </div>
-         <div class="box p2">
-            <p> d</p>
-        </div>
-        <div class="box p1">
-            <p>Hello</p>
-        </div>
-        <div class="box p2">
-            <p>w jlkdjzlekdjzlkdjzlkjd lzkej dlkzj dlkzjedlkzej dlkzj edlk</p>
-        </div>
-         <div class="box p2">
-            <p> d</p>
-        </div>
-        <div class="box p1">
-            <p>Hello</p>
-        </div>
-        <div class="box p2">
-            <p>w jlkdjzlekdjzlkdjzlkjd lzkej dlkzj dlkzjedlkzej dlkzj edlk</p>
-        </div>
-         <div class="box p2">
-            <p> d</p>
-        </div>
-        <div class="box p1">
-            <p>Hello</p>
-        </div>
-        <div class="box p2">
-            <p>w jlkdjzlekdjzlkdjzlkjd lzkej dlkzj dlkzjedlkzej dlkzj edlk</p>
-        </div>
-         <div class="box p2">
-            <p> d</p>
-        </div>
-        <div class="box p1">
-            <p>Hello</p>
-        </div>
-        <div class="box p2">
-            <p>w jlkdjzlekdjzlkdjzlkjd lzkej dlkzj dlkzjedlkzej dlkzj edlk</p>
-        </div>
-
-
-    </div>
-   
+<body class="body" style="background-color: #e4e4e4; margin: 0; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none;">
+	<table class="nl-container" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #e4e4e4;">
+		<tbody>
+			<tr>
+				<td>
+					<table class="row row-1" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #e4e4e4;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top;">
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td class="col-pad" style="padding-bottom:12px;padding-top:12px;">
+																<table class="heading_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																	<tr>
+																		<td class="pad" style="text-align:center;width:100%;">
+																			<h1 style="margin: 0; color: #000000; direction: ltr; font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 700; letter-spacing: normal; line-height: 1.2; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 19px;"><span class="tinyMce-placeholder" style="word-break: break-word;">ATTENTION, EMPRUNTER DE L’ARGENT COÛTE AUSSI DE L’ARGENT.</span></h1>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-2" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #eaeff6; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top;">
+													<table class="image_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td class="pad" style="width:100%;">
+																<div class="alignment" align="center">
+																	<div style="max-width: 600px;"><a href="https://www.carrefourfinance.be/fr/calculez-votre-pret-personnel?utm_source=prospection&utm_medium=email&utm_campaign=GOEWIE_26_04&utm_content=cta" target="_blank"><img src="https://media.beefree.cloud/pub/bfra/vz5trk2o/tji/lnf/8ln/Plan%20de%20travail%20%E2%80%93%201%402x.png" style="display: block; height: auto; border: 0; width: 100%;" width="600" alt=" image" title=" image" height="auto"></a></div>
+																</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-3" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #e4e4e4;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top;">
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td class="col-pad" style="padding-top:24px;">
+																<table class="paragraph_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+																	<tr>
+																		<td class="pad" style="padding-left:24px;padding-right:24px;">
+																			<div style="color:#4a4a49;direction:ltr;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:1.6;text-align:left;mso-line-height-alt:26px;">
+																				<p style="margin: 0; margin-bottom: 16px;"><strong>Le printemps est là, et avec lui l’envie de renouveau !</strong></p>
+																				<p style="margin: 0; margin-bottom: 16px;">Un coup de frais à l’intérieur avec une nouvelle peinture, des meubles qui changent tout, ou à l’extérieur avec un salon de jardin, une piscine pour les enfants ou même un jardin entièrement repensé... <strong>c’est le moment idéal pour concrétiser vos idées.</strong></p>
+																				<p style="margin: 0;">Ce serait dommage de passer à côté, parce que ces&nbsp;projets* peuvent vite coûter cher. <strong>Demandez à Carrefour Finance un prêt personnel <sup>(1)</sup></strong><sup>&nbsp;</sup>afin de pouvoir les réaliser&nbsp;en cas d'obtention du prêt.&nbsp;</p>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+																<table class="button_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																	<tr>
+																		<td class="pad" style="padding-bottom:32px;padding-left:12px;padding-right:12px;padding-top:32px;text-align:center;">
+																			<div class="alignment" align="center"><a href="https://www.carrefourfinance.be/fr/calculez-votre-pret-personnel?utm_source=prospection&utm_medium=email&utm_campaign=GOEWIE_26_04&utm_content=cta" target="_blank" style="color:#ffffff;text-decoration:none;"><!--[if mso]>
+<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"  href="https://www.carrefourfinance.be/fr/calculez-votre-pret-personnel?utm_source=prospection&utm_medium=email&utm_campaign=GOEWIE_26_04&utm_content=cta"  style="height:44px;width:251px;v-text-anchor:middle;" arcsize="91%" fillcolor="#ff751f">
+<v:stroke dashstyle="Solid" weight="0px" color="#ff751f"/>
+<w:anchorlock/>
+<v:textbox inset="0px,0px,0px,0px">
+<center dir="false" style="color:#ffffff;font-family:Tahoma, Verdana, sans-serif;font-size:24px">
+<![endif]--><span class="button" style="background-color: #ff751f; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-radius: 40px; border-right: 0px solid transparent; border-top: 0px solid transparent; color: #ffffff; display: inline-block; font-family: 'Ubuntu', Tahoma, Verdana, Segoe, sans-serif; font-size: 24px; font-weight: 500; mso-border-alt: none; text-align: center; width: auto; word-break: keep-all; letter-spacing: normal;"><span class="btn-pad" style="word-break: break-word; padding-left: 20px; padding-right: 20px; padding-top: 8px; padding-bottom: 8px; display: block;"><span style="word-break: break-word; line-height: 28.799999999999997px;">&nbsp;Simulez votre prêt</span></span></span><!--[if mso]></center></v:textbox></v:roundrect><![endif]--></a></div>
+																		</td>
+																	</tr>
+																</table>
+																<table class="html_block block-3" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																	<tr>
+																		<td class="pad">
+																			<div style="font-family:Arial, Helvetica, sans-serif;text-align:center;" align="center"></div>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-4" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; border-radius: 0; color: #000000; padding-left: 24px; padding-right: 24px; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td>
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tbody>
+															<tr>
+																<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; background-color: #eaeff6; vertical-align: top; border-radius: 0px 0px 0px 0px;">
+																	<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																		<tr>
+																			<td class="col-pad" style="padding-bottom:16px;padding-left:20px;padding-right:20px;padding-top:16px;">
+																				<table class="heading_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																					<tr>
+																						<td class="pad" style="text-align:center;width:100%;">
+																							<h1 style="margin: 0; color: #0f4182; direction: ltr; font-family: 'Ubuntu', Tahoma, Verdana, Segoe, sans-serif; font-size: 24px; font-weight: 700; letter-spacing: normal; line-height: 1.2; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 29px;"><span class="tinyMce-placeholder" style="word-break: break-word;">FINANCEZ TOUT TYPE DE PROJET</span></h1>
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-5" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; border-radius: 0; color: #000000; padding-left: 24px; padding-right: 24px; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td>
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tbody>
+															<tr>
+																<td class="column column-1" width="33.333333333333336%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; background-color: #eaeff6; vertical-align: top; border-radius: 0px;">
+																	<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																		<tr>
+																			<td class="col-pad" style="padding-left:24px;">
+																				<table class="image_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																					<tr>
+																						<td class="pad" style="width:100%;">
+																							<div class="alignment" align="center">
+																								<div style="max-width: 160px;"><a href="https://www.carrefourfinance.be/fr/calculez-votre-pret-personnel?utm_source=prospection&utm_medium=email&utm_campaign=GOEWIE_26_04&utm_content=cta" target="_blank"><img src="https://media.beefree.cloud/pub/bfra/vz5trk2o/n7t/43w/2lr/Capture%20d%E2%80%99e%CC%81cran%202026-04-20%20a%CC%80%2011.20.32.png" style="display: block; height: auto; border: 0; width: 100%;" width="160" alt="image-deco-travaux" title="image-deco-travaux" height="auto"></a></div>
+																							</div>
+																						</td>
+																					</tr>
+																				</table>
+																				<table class="paragraph_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+																					<tr>
+																						<td class="pad" style="padding-bottom:8px;padding-top:20px;">
+																							<div style="color:#034691;direction:ltr;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;font-size:20px;font-weight:700;letter-spacing:0px;line-height:1.2;text-align:left;mso-line-height-alt:24px;">
+																								<p style="margin: 0;">Déco/Travaux</p>
+																							</div>
+																						</td>
+																					</tr>
+																				</table>
+																				<table class="paragraph_block block-3" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+																					<tr>
+																						<td class="pad" style="padding-bottom:20px;">
+																							<div style="color:#707070;direction:ltr;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:1.2;text-align:left;mso-line-height-alt:19px;">
+																								<p style="margin: 0;">Une nouvelle cuisine ou une isolation plus performante ?</p>
+																							</div>
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+																<td class="column column-2" width="33.333333333333336%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; background-color: #eaeff6; vertical-align: top; border-radius: 0px;">
+																	<table class="image_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																		<tr>
+																			<td class="pad" style="padding-left:12px;padding-right:12px;width:100%;">
+																				<div class="alignment" align="center">
+																					<div style="max-width: 160px;"><a href="https://www.carrefourfinance.be/fr/calculez-votre-pret-personnel?utm_source=prospection&utm_medium=email&utm_campaign=GOEWIE_26_04&utm_content=cta" target="_blank"><img src="https://media.beefree.cloud/pub/bfra/vz5trk2o/fdq/49q/yq6/Capture%20d%E2%80%99e%CC%81cran%202026-04-20%20a%CC%80%2011.20.41.png" style="display: block; height: auto; border: 0; width: 100%;" width="160" alt="image-voiture" title="image-voiture" height="auto"></a></div>
+																				</div>
+																			</td>
+																		</tr>
+																	</table>
+																	<table class="paragraph_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+																		<tr>
+																			<td class="pad" style="padding-bottom:8px;padding-left:16px;padding-top:20px;">
+																				<div style="color:#034691;direction:ltr;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;font-size:20px;font-weight:700;letter-spacing:0px;line-height:1.2;text-align:left;mso-line-height-alt:24px;">
+																					<p style="margin: 0;">Auto/Moto</p>
+																				</div>
+																			</td>
+																		</tr>
+																	</table>
+																	<table class="paragraph_block block-3" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+																		<tr>
+																			<td class="pad" style="padding-bottom:20px;padding-left:12px;">
+																				<div style="color:#707070;direction:ltr;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:1.2;text-align:left;mso-line-height-alt:19px;">
+																					<p style="margin: 0;">Envie de remplacer votre véhicule ?</p>
+																				</div>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+																<td class="column column-3" width="33.333333333333336%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; background-color: #eaeff6; vertical-align: top; border-radius: 0px;">
+																	<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																		<tr>
+																			<td class="col-pad" style="padding-right:24px;">
+																				<table class="image_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																					<tr>
+																						<td class="pad" style="width:100%;">
+																							<div class="alignment" align="center">
+																								<div style="max-width: 160px;"><a href="https://www.carrefourfinance.be/fr/calculez-votre-pret-personnel?utm_source=prospection&utm_medium=email&utm_campaign=GOEWIE_26_04&utm_content=cta" target="_blank"><img src="https://media.beefree.cloud/pub/bfra/vz5trk2o/vv8/8oi/eqr/Capture%20d%E2%80%99e%CC%81cran%202026-04-20%20a%CC%80%2011.20.50.png" style="display: block; height: auto; border: 0; width: 100%;" width="160" alt="" title="" height="auto"></a></div>
+																							</div>
+																						</td>
+																					</tr>
+																				</table>
+																				<table class="paragraph_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+																					<tr>
+																						<td class="pad" style="padding-bottom:8px;padding-left:16px;padding-top:20px;">
+																							<div style="color:#034691;direction:ltr;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;font-size:20px;font-weight:700;letter-spacing:0px;line-height:1.2;text-align:left;mso-line-height-alt:24px;">
+																								<p style="margin: 0;">Loisir/Voyage</p>
+																							</div>
+																						</td>
+																					</tr>
+																				</table>
+																				<table class="paragraph_block block-3" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+																					<tr>
+																						<td class="pad" style="padding-bottom:36px;padding-left:12px;">
+																							<div style="color:#707070;direction:ltr;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:1.2;text-align:left;mso-line-height-alt:19px;">
+																								<p style="margin: 0;">Un city trip, un road trip ou un rêve en famille ?&nbsp;</p>
+																							</div>
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-6" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding-left: 24px; padding-right: 24px; background-color: #ffffff; background-size: auto; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td>
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tbody>
+															<tr>
+																<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; background-color: #eaeff6; vertical-align: top; border-radius: 0px 0px 24px 24px;">
+																	<table class="image_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																		<tr>
+																			<td class="pad" style="width:100%;">
+																				<div class="alignment" align="center">
+																					<div style="max-width: 552px;"><img src="https://media.beefree.cloud/pub/bfra/vz5trk2o/rfd/row/p6w/carrefour_simul_02.png" style="display: block; height: auto; border: 0; width: 100%; border-radius: 0px 0px 0px 0px;" width="552" alt="" title="" height="auto"></div>
+																				</div>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-7" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top;">
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td class="col-pad" style="padding-top:24px;">
+																<table class="heading_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																	<tr>
+																		<td class="pad" style="text-align:center;width:100%;">
+																			<h1 style="margin: 0; color: #0f4182; direction: ltr; font-family: 'Ubuntu', Tahoma, Verdana, Segoe, sans-serif; font-size: 24px; font-weight: 700; letter-spacing: normal; line-height: 1.2; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 29px;"><span class="tinyMce-placeholder" style="word-break: break-word;">Pourquoi choisir Carrefour Finance ?</span></h1>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-8" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td class="column column-1" width="33.333333333333336%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top;">
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td class="col-pad" style="padding-left:24px;">
+																<table class="paragraph_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+																	<tr>
+																		<td class="pad" style="padding-bottom:8px;padding-top:20px;">
+																			<div style="color:#0e4182;direction:ltr;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;font-size:16px;font-weight:700;letter-spacing:0px;line-height:1.2;text-align:center;mso-line-height-alt:19px;">
+																				<p style="margin: 0;">Des conseillers&nbsp;<br>à votre écoute</p>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+																<table class="paragraph_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+																	<tr>
+																		<td class="pad" style="padding-bottom:12px;">
+																			<div style="color:#0e4182;direction:ltr;font-family:Arial, Helvetica, sans-serif;font-size:12px;font-weight:400;letter-spacing:0px;line-height:1.2;text-align:center;mso-line-height-alt:14px;">
+																				<p style="margin: 0;">Notre équipe de conseillers spécialisés vous offre une prise en charge attentive et personnalisée, adaptée à vos besoins et à vos attentes !</p>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="column gap" style="vertical-align: top; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left;">
+													<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 20px; height: 20px;" width="20" height="20"></table>
+												</td>
+												<td class="column column-2" width="33.333333333333336%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top;">
+													<table class="paragraph_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+														<tr>
+															<td class="pad" style="padding-bottom:8px;padding-top:20px;">
+																<div style="color:#0e4182;direction:ltr;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:1.2;text-align:center;mso-line-height-alt:19px;">
+																	<p style="margin: 0;"><strong>Un expert financier à <br></strong><strong>vos côtés</strong></p>
+																</div>
+															</td>
+														</tr>
+													</table>
+													<table class="paragraph_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+														<tr>
+															<td class="pad" style="padding-bottom:12px;">
+																<div style="color:#0e4182;direction:ltr;font-family:Arial, Helvetica, sans-serif;font-size:12px;font-weight:400;letter-spacing:0px;line-height:1.2;text-align:center;mso-line-height-alt:14px;">
+																	<p style="margin: 0;">Bénéficiez de l’expertise de Carrefour Finance pour vous accompagner dans la réalisation de vos projets.</p>
+																</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="column gap" style="vertical-align: top; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left;">
+													<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 20px; height: 20px;" width="20" height="20"></table>
+												</td>
+												<td class="column column-3" width="33.333333333333336%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top;">
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td class="col-pad" style="padding-right:24px;">
+																<table class="paragraph_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+																	<tr>
+																		<td class="pad" style="padding-bottom:8px;padding-top:20px;">
+																			<div style="color:#0e4182;direction:ltr;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;font-size:16px;font-weight:400;letter-spacing:0px;line-height:1.2;text-align:center;mso-line-height-alt:19px;">
+																				<p style="margin: 0;"><strong>Des produits adaptés à vos besoins</strong></p>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+																<table class="paragraph_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+																	<tr>
+																		<td class="pad" style="padding-bottom:12px;">
+																			<div style="color:#0e4182;direction:ltr;font-family:Arial, Helvetica, sans-serif;font-size:12px;font-weight:400;letter-spacing:0px;line-height:1.2;text-align:center;mso-line-height-alt:14px;">
+																				<p style="margin: 0;">Nous pourrions avoir la solution financière qui vous convient le mieux !</p>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-9" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; border-radius: 0; color: #000000; padding-left: 24px; padding-right: 24px; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td>
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tbody>
+															<tr>
+																<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top;">
+																	<table class="image_block block-1 mobile_hide" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																		<tr>
+																			<td class="pad" style="padding-top:1px;width:100%;">
+																				<div class="alignment" align="center">
+																					<div style="max-width: 552px;"><a href="https://www.carrefourfinance.be/fr/calculez-votre-pret-personnel?utm_source=prospection&utm_medium=email&utm_campaign=GOWIE_25_81&utm_content=cta" target="_blank"><img src="https://media.beefree.cloud/pub/bfra/vz5trk2o/g4p/hi0/c1i/ban_mail_carrefour_02_1_1.png" style="display: block; height: auto; border: 0; width: 100%;" width="552" alt="logo" title="logo" height="auto"></a></div>
+																				</div>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-10 mobile_hide" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-size: auto;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding-left: 24px; padding-right: 24px; background-color: #ffffff; background-size: auto; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td>
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tbody>
+															<tr>
+																<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; background-color: #0a509d; vertical-align: top; border-radius: 0px 0px 80px 160px;">
+																	<table class="html_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																		<tr>
+																			<td class="pad">
+																				<div style="font-family:Arial, Helvetica, sans-serif;text-align:center;" align="center"><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="mso-table-lspace:0pt; mso-table-rspace:0pt;">
+  <tr>
+    <td align="center" style="padding:0 0 0 0;">
+      <div style="max-width:600px; margin:0 auto;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="background-color:#0a509d; border-radius:0 0 80px 160px; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+          <tr>
+            <td align="center" style="padding:12px 24px 4px 24px;">
+              <p style="margin:0 0 8px 0; color:#ffffff; font-family:Ubuntu, Tahoma, Verdana, Segoe, sans-serif; font-size:12px; line-height:16px; mso-line-height-rule:exactly;">
+                Nous sommes là pour vous accompagner, à chaque étape.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="padding:0 24px 4px 24px;">
+              <p style="margin:0 0 4px 0; color:#ffffff; font-family:Ubuntu, Tahoma, Verdana, Segoe, sans-serif; font-size:32px; line-height:40px; font-weight:500; mso-line-height-rule:exactly;">
+                0800/40.134
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="padding:0 24px 12px 24px;">
+              <p style="margin:0; color:#ffffff; font-family:Ubuntu, Tahoma, Verdana, Segoe, sans-serif; font-size:12px; line-height:16px; mso-line-height-rule:exactly;">
+                <strong>du lundi au vendredi de 8h45 à 19h.</strong>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+</table></div>
+																			</td>
+																		</tr>
+																	</table>
+																	<table class="image_block block-2 desktop_hide" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-hide: all; display: none; max-height: 0; overflow: hidden;">
+																		<tr>
+																			<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
+																				<div class="alignment" align="center">
+																					<div style="max-width: 303.6px;"><a href="https://www.carrefourfinance.be/fr/calculez-votre-pret-personnel?utm_source=prospection&utm_medium=email&utm_campaign=GOWIE_25_81&utm_content=cta" target="_blank"><img src="https://media.beefree.cloud/pub/bfra/vz5trk2o/ze0/u4q/msn/Copie%20de%20Happymiles%20%2820%29%20%281%29.png" style="display: block; height: auto; border: 0; width: 100%;" width="303.6" alt="logo" title="logo" height="auto"></a></div>
+																				</div>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table><!--[if !mso]><!-->
+					<table class="row row-11 desktop_hide" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-hide: all; display: none; max-height: 0; overflow: hidden; background-size: auto;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-hide: all; display: none; max-height: 0; overflow: hidden; background-size: auto; padding-left: 24px; padding-right: 24px; background-color: #fff; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td>
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-hide: all; display: none; max-height: 0; overflow: hidden;">
+														<tbody>
+															<tr>
+																<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; background-color: #0a509d; vertical-align: top;">
+																	<table class="paragraph_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; mso-hide: all; display: none; max-height: 0; overflow: hidden;">
+																		<tr>
+																			<td class="pad" style="padding-bottom:12px;padding-top:8px;">
+																				<div style="color:#ffffff;direction:ltr;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;font-size:12px;font-weight:400;letter-spacing:0px;line-height:1.2;text-align:center;mso-line-height-alt:14px;">
+																					<p style="margin: 0;">Nous sommes là pour vous accompagner, à chaque étape.</p>
+																				</div>
+																			</td>
+																		</tr>
+																	</table>
+																	<table class="paragraph_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; mso-hide: all; display: none; max-height: 0; overflow: hidden;">
+																		<tr>
+																			<td class="pad" style="padding-bottom:8px;">
+																				<div style="color:#ffffff;direction:ltr;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;font-size:32px;font-weight:500;letter-spacing:0px;line-height:1.2;text-align:center;mso-line-height-alt:38px;">
+																					<p style="margin: 0;">0800/40.134</p>
+																				</div>
+																			</td>
+																		</tr>
+																	</table>
+																	<table class="paragraph_block block-3" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; mso-hide: all; display: none; max-height: 0; overflow: hidden;">
+																		<tr>
+																			<td class="pad">
+																				<div style="color:#ffffff;direction:ltr;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;font-size:12px;font-weight:400;letter-spacing:0px;line-height:1.2;text-align:center;mso-line-height-alt:14px;">
+																					<p style="margin: 0;"><strong>du lundi au vendredi de 8h45 à 19h.</strong></p>
+																				</div>
+																			</td>
+																		</tr>
+																	</table>
+																	<div class="spacer_block block-4" style="height:40px;line-height:40px;font-size:1px;">&#8202;</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table><!--<![endif]-->
+					<table class="row row-12" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top;">
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td class="col-pad" style="padding-left:20px;padding-right:20px;padding-top:20px;">
+																<table class="paragraph_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+																	<tr>
+																		<td class="pad" style="padding-bottom:12px;">
+																			<div style="color:#4b4b4b;direction:ltr;font-family:'Ubuntu', Tahoma, Verdana, Segoe, sans-serif;font-size:12px;font-weight:500;letter-spacing:0px;line-height:1.6;text-align:left;mso-line-height-alt:19px;">
+																				<p style="margin: 0; margin-bottom: 0px;">Le prêt personnel est un crédit à la consommation sous forme de prêt à tempérament à durée déterminée soumis au livre VII (titre 4, chapitre 1) du Code de droit économique - sous réserve d’acceptation de votre demande par le prêteur après examen de votre situation financière - Prêteur et éditeur responsable : Fimaser SA - Boulevard Baudouin 29/3B, 1000 Bruxelles - N° BCE/TVA BE 0434.818.930 - IBAN: BE45 3100 7423 4489 - BIC : BBRUBEBB - Tél.: +32 2 226 38 00 - e-mail: <a href="mailto:fimaser.sav@fimaser.be" style="text-decoration: underline; color: #80b9ca;">sav@fimaser.be</a> - RPM Bruxelles.</p>
+																				<p style="margin: 0; margin-bottom: 0px;">&nbsp;</p>
+																				<p style="margin: 0;">* à condition que votre projet à financer soit licite.</p>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-13" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top;">
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td class="col-pad" style="padding-left:24px;padding-right:24px;padding-top:12px;">
+																<table class="heading_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																	<tr>
+																		<td class="pad" style="text-align:center;width:100%;">
+																			<h1 style="margin: 0; color: #b9b9b9; direction: ltr; font-family: 'Ubuntu', Tahoma, Verdana, Segoe, sans-serif; font-size: 24px; font-weight: 500; letter-spacing: normal; line-height: 1.2; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 29px;"><span class="tinyMce-placeholder" style="word-break: break-word;">ATTENTION, EMPRUNTER DE L’ARGENT <br>COÛTE AUSSI DE L’ARGENT.</span></h1>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-14" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; border-radius: 0; color: #000000; width: 600px; margin: 0 auto;" width="600">
+										<tbody>
+											<tr>
+												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top;">
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td class="col-pad" style="padding-bottom:4px;padding-left:24px;padding-right:24px;padding-top:4px;">
+																<table class="paragraph_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+																	<tr>
+																		<td class="pad">
+																			<div style="color:#707070;direction:ltr;font-family:Arial, Helvetica, sans-serif;font-size:8px;font-weight:400;letter-spacing:0px;line-height:1.2;text-align:center;mso-line-height-alt:10px;">
+																				<p style="margin: 0;">Vous recevez cette newsletter car vous êtes membre de la base&nbsp;<strong>The Wave Media&nbsp;</strong>En poursuivant la lecture de notre newsletter, vous acceptez l’utilisation de cookies qui permettent de réaliser des statistiques d'audience et vous proposer des communications et publicités adaptées à vos centres d'intérêt. En cliquant ici,&nbsp;je peux me <a href="https://thewave.digital/fr/privacy/" target="_blank" style="text-decoration: underline; color: #80b9ca;" rel="noopener">désabonner</a> de la newsletter. Je souhaite en savoir plus et paramétrer mes cookies. J’aimerais avoir&nbsp;<a href="https://thewave.digital/fr/cookies/" style="text-decoration: underline; color: #80b9ca;">plus d'informations</a>&nbsp;sur<a href="https://thewave.digital/fr/privacy/" target="_blank" style="text-decoration: underline; color: #80b9ca;" rel="noopener">&nbsp;les traitements de données et mes droits.</a></p>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+																<table class="heading_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																	<tr>
+																		<td class="pad" style="padding-bottom:8px;padding-top:8px;text-align:center;width:100%;">
+																			<h1 style="margin: 0; color: #000000; direction: ltr; font-family: 'Ubuntu', Tahoma, Verdana, Segoe, sans-serif; font-size: 8px; font-weight: 400; letter-spacing: normal; line-height: 1.2; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 10px;"><span class="tinyMce-placeholder" style="word-break: break-word;">{unsubscribe_text}</span></h1>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table><!-- End -->
 </body>
+
 </html>

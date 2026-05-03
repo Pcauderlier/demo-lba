@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .container{
+            padding: 50px;
+            border-bottom: 1px dashed black;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="form">
+        <input type="text" id="nom">
+        <input type="number" id="age">
+        <button>Envoyer</button>
+    </form>
+    <script>
+        document.querySelector("#form").addEventListener('submit', function(e){
+            e.preventDefault()
+            console.log(nom.value)
+            console.log(age.value)
+        })
+    </script>
+    <ul id="list"></ul>
+    <div id="table"></div>
+
+    <ul>
+        <li class="test">20</li>
+        <li class="test">200</li>
+        <li class="test">10</li>
+        <li class="test">205</li>
+        <li class="test">15</li>
+    </ul>
+
+    <ul class="list">
+        <li>1</li>
+        <li class="special">2</li>
+        <li >3</li>
+
+    </ul>
+
+    
+    <!-- <script src="./script2.js"></script> -->
+</body>
+</html>
