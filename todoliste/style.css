@@ -29,6 +29,9 @@
     outline: none;
     border-radius: 10px;
 }
+.headerForm textarea{
+    width: 95%;
+}
 .headerForm h2{
     text-align: center;
     text-transform: uppercase;
@@ -72,9 +75,35 @@ body{
 }
 .todo-element{
     position : relative;
-    padding: 20px 10px;
+    padding: 20px 72px 20px 10px;
     border-radius: 10px;
     box-shadow: 0 0 20px #a0a0a0;
+}
+
+.todo-reorder{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    z-index: 1;
+}
+.todo-reorder button{
+    padding: 4px 8px;
+    font-size: 1rem;
+    line-height: 1;
+    border: 1px solid #c8c8f0;
+    border-radius: 8px;
+    background: #fff;
+}
+.todo-reorder button:hover:not(:disabled){
+    background: #eef0ff;
+    border-color: #5a5ae8;
+}
+.todo-reorder button:disabled{
+    opacity: 0.35;
+    cursor: not-allowed;
 }
 
 #todo{
@@ -115,4 +144,10 @@ body{
 }
 .popup .container .group{
     gap: 20px;
+}
+input[type="submit"], button{
+    cursor: pointer;
+}
+.headerForm {
+    width: 80%;
 }

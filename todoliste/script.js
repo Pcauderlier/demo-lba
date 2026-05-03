@@ -48,16 +48,21 @@ function renderTodo(){
     if (todoList.length == 0){
         return;
     }
-    for (let elem of todoList){
-        let item = buildItemHtml(elem.title, elem.description, elem.date,elem.id);
+    for (let i = 0; i < todoList.length; i++){
+        let elem = todoList[i];
+        let item = buildItemHtml(elem.title, elem.description, elem.date, elem.id, i, todoList.length);
         todoElem.appendChild(item);
     }
 }
 
-function buildItemHtml(title, description, date, id){
+function buildItemHtml(title, description, date, id, index, total){
     let div = document.createElement('div');
     div.classList.add('todo-element');
     div.innerHTML = `
+        <div class="todo-reorder" data-itemId="${id}">
+            <button type="button" class="move-up" ${index === 0 ? 'disabled' : ''}>⬆️</button>
+            <button type="button" class="move-down" ${index === total - 1 ? 'disabled' : ''}>⬇️</button>
+        </div>
         <div class='title'>${title}</div>
         <div class='description'>${description}</div>
         <div class='date'>${formatDate(date)}</div>
@@ -67,19 +72,54 @@ function buildItemHtml(title, description, date, id){
         </div>
     `
     div.querySelector(".delete").addEventListener("click", function(e){
-        // console.log(e.target.getAttribute("data-itemId"))
         deleteItem(e)
     })
     div.querySelector(".modify").addEventListener("click", function(e){
         fillModifyForm(e)
     })
+    div.querySelector(".move-up").addEventListener("click", function(e){
+        moveItemUp(e)
+    })
+    div.querySelector(".move-down").addEventListener("click", function(e){
+        moveItemDown(e)
+    })
 
     return div
 }
 
-function findItemById(itemId){
-    for (let item of todoList){
+function moveItemUp(event){
+    let itemId = event.target.closest(".todo-reorder").getAttribute("data-itemId")
+    let search = findItemById(itemId, true)
+    if (!search) return
+    let i = search.index
+    if (i <= 0) return
+    let itemMovingUp = todoList[i]
+    let itemAbove = todoList[i - 1]
+    todoList[i - 1] = itemMovingUp
+    todoList[i] = itemAbove
+    renderTodo()
+}
+
+function moveItemDown(event){
+    let itemId = event.target.closest(".todo-reorder").getAttribute("data-itemId")
+    let search = findItemById(itemId, true)
+    if (!search) return
+    let i = search.index
+    if (i >= todoList.length - 1) return
+    let itemMovingDown = todoList[i]
+    let itemBelow = todoList[i + 1]
+    todoList[i] = itemBelow
+    todoList[i + 1] = itemMovingDown
+    renderTodo()
+}
+
+function findItemById(itemId,returnIndex = false){
+    for (let index in todoList){
+        let item = todoList[index]
         if (item.id == itemId){
+            if (returnIndex){
+                return {index: index, item: item}
+            }
             return item
         }
     }
@@ -96,10 +136,8 @@ function fillModifyForm(event){
     popup.querySelector("#modify #title").value = item.title
     popup.querySelector("#modify #description").value = item.description
     popup.querySelector("#modify #date").value = item.date
+    popup.querySelector("#modify #itemId").value = item.id
     togglePopup()
-
-    console.log(item)
-
 }
 function deleteItem(event){
     let itemId = getItemIdFromEvent(event)
@@ -133,6 +171,19 @@ document.querySelector("form#create").addEventListener('submit', function(e){
     let id = todoList.length+1
     addElemToList(id,title,description,date)
 
+})
+
+document.querySelector("form#modify").addEventListener('submit', function(e){
+    e.preventDefault();
+    let search = findItemById(getElemContent('itemId','modify'), true)
+    let item = search.item
+    item.title = getElemContent('title','modify')
+    item.description = getElemContent('description','modify')
+    item.date = getElemContent('date','modify')
+    todoList[search.index] = item
+    renderTodo()
+    togglePopup()
+    
 })
 function togglePopup(){
     popup.classList.toggle("hidden")
